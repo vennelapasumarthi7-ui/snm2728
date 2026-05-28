@@ -7,7 +7,7 @@ from stoken import endata,dndata  # used to sign data passing through urls
 from mysql.connector import (connection) #used to connect mysql server
 import flask_excel as excel #used to generate data in excel format
 import re
-mydb=connection.MySQLConnection(user='root',host='localhost',password='admin',database='snmdb')
+mydb=connection.MySQLConnection(user='flaskuser',host='localhost',password='password',database='flaskdb')
 app=Flask(__name__)
 excel.init_excel(app) #initialize excel in flask app
 app.secret_key='code24'
